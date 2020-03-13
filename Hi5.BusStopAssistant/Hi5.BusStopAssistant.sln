@@ -5,6 +5,12 @@ VisualStudioVersion = 16.0.29905.134
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hi5.BusStopAssistant", "Hi5.BusStopAssistant.csproj", "{87215F2A-772B-4BB0-9155-5EC0B012DE08}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{DFCABCB9-3535-46EC-B400-9F9D1F9BCBE2}"
+	ProjectSection(SolutionItems) = preProject
+		..\.github\workflows\dev_riderassistant.yml = ..\.github\workflows\dev_riderassistant.yml
+		..\.github\workflows\dotnetcore.yml = ..\.github\workflows\dotnetcore.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
