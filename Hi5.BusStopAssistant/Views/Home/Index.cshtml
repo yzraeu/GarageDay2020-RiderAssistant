@@ -1,8 +1,191 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+	ViewData["Title"] = "Bus Stop #58269";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<audio class="audio-player" src="~/audios/Audio_en_CA.mp3"></audio>
+
+<audio class="alert-player" src="~/audios/Alert_en_CA.mp3"></audio>
+
+<div class="row assistant-header">
+	<div class="header-logo"></div>
+	<div class="col header-text">Rider Assistant</div>
 </div>
+<div class="row assistant-options">
+	<div class="col-4 speak-col">
+		<i class="fa fa-volume-up fa-lg" id="mute-button"></i>
+	</div>
+	<div class="col-4 language-col">
+		<div class="dropdown">
+			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				<i class="fa fa-language fa-lg"></i>
+			</button>
+			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+				<a class="dropdown-item" href="#">🇨🇦 English</a>
+				<a class="dropdown-item" href="#">🇧🇷 Portugues</a>
+				<a class="dropdown-item" href="#">🇸🇻 Español</a>
+			</div>
+		</div>
+	</div>
+	<div class="col-4 login-col">
+		<i class="fa fa-user fa-lg"></i>
+	</div>
+</div>
+<div class="row assistant-body">
+	<h2>Bus Stop #58269 - W Broadway at Ash St</h2>
+	<div class="accordion" id="accordionExample">
+		<div class="card">
+			<div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne">
+				<div class="bus-line">
+					9
+				</div>
+				<div class="bus-terminus">
+					UBC
+				</div>
+				<div class="bus-prediction">
+					3, 8, 15 min
+				</div>
+			</div>
+			<div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordionExample">
+				<div class="card-body">
+					<ul>
+						@*<li>Boundary Loop</li>
+								<li>Lougheed Hwy at Skeena St</li>
+								<li class="hide">E Broadway at Cassiar St</li>
+								<li class="hide">E Broadway at Rupert St</li>
+								<li class="hide">E Broadway at Windermere St</li>
+								<li class="hide">E Broadway at Lillooet St</li>
+								<li class="hide">E Broadway at Renfrew St</li>
+								<li class="hide">E Broadway at Slocan St</li>
+								<li class="hide">E Broadway at Penticton St</li>
+								<li class="hide">E Broadway at Kamloops St</li>
+								<li class="hide">E Broadway at Nanaimo St</li>
+								<li class="hide">E Broadway at Lakewood Dr</li>
+								<li class="hide">E Broadway at Semlin Dr</li>
+								<li class="hide">Commercial-Broadway Stn Bay 1</li>
+								<li class="hide">E Broadway at Woodland Dr</li>
+								<li class="hide">E Broadway at Mclean Dr</li>
+								<li class="hide">E Broadway at Clark Dr</li>
+								<li class="hide">E Broadway at Glen Dr</li>
+								<li class="hide">E Broadway at Windsor St</li>
+								<li class="hide">E Broadway at Prince Albert St</li>
+								<li class="hide">E Broadway at Fraser St</li>
+								<li class="hide">E Broadway at Saint George St</li>
+								<li class="hide">E Broadway at Prince Edward St</li>
+								<li class="hide">E Broadway at Scotia St</li>
+								<li class="hide">E Broadway at Main St</li>
+								<li class="hide">W Broadway at Ontario St</li>
+								<li class="hide">W Broadway at Columbia St</li>
+							<li>Broadway-City Hall Stn Bay 5</li>*@
+						<li class="">...</li>
+						<li>W Broadway at Ash St</li>
+						<li class="current-bus-stop"><i class="fa fa-arrow-circle-right"></i> W Broadway at Ash St</li>
+						<li>W Broadway at Heather St</li>
+						<li class="">...</li>
+						@*<li>W Broadway at Willow St</li>
+							<li>W Broadway at Oak St</li>
+							<li>W Broadway at Spruce St</li>
+							<li>W Broadway at Alder St</li>
+							<li>W Broadway at Hemlock St</li>
+							<li>W Broadway at Granville St</li>
+							<li>W Broadway at Pine St</li>
+							<li>W Broadway at Burrard St</li>
+							<li>W Broadway at Maple St</li>
+							<li>W Broadway at Arbutus St</li>
+							<li>W Broadway at Yew St</li>
+							<li>W Broadway at Balsam St</li>
+							<li>W Broadway at Trafalgar St</li>
+							<li>W Broadway at Macdonald St</li>
+							<li>W Broadway at Bayswater St</li>
+							<li>W Broadway at Balaclava St</li>
+							<li>W Broadway at Blenheim St</li>
+							<li>W Broadway at Collingwood St</li>
+							<li>Alma St at W 10 Ave</li>
+							<li>W 10 Ave at Wallace St</li>
+							<li>W 10 Ave at Crown St</li>
+							<li>W 10 Ave at Camosun St</li>
+							<li>W 10 Ave at Courtenay St</li>
+							<li>W 10 Ave at Discovery St</li>
+							<li>W 10 Ave at Trimble St</li>
+							<li>W 10 Ave at Sasamat St</li>
+							<li>W 10 Ave at Tolmie St</li>
+							<li>University Blvd at Blanca St</li>
+							<li>University Blvd at 5100 Block</li>
+							<li>University Blvd at 5300 Block</li>*@
+						<li>University Blvd at Acadia Rd</li>
+
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="card">
+			<div class="card-header" id="headingTwo" data-toggle="collapse" data-target="#collapseTwo">
+				<div class="bus-line">
+					17
+				</div>
+				<div class="bus-terminus">
+					Downtown
+				</div>
+				<div class="bus-prediction">
+					10, 20, 30 min &nbsp; <i class="fa fa-exclamation-triangle text-warning"></i>
+				</div>
+			</div>
+			<div class="card-alert">
+				<span class="badge badge-warning">Cancellation</span> Bus number 9 will be canceled after 8PM.
+			</div>
+			<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
+				<div class="card-body">
+					<ul>
+						@*<li>Robson St at Hamilton St</li>
+							<li>Robson St at Granville St</li>
+							<li>Granville St at W Georgia St</li>
+							<li>Granville St at Dunsmuir St</li>
+							<li>Granville St at W Pender St</li>
+							<li>W Pender St at Seymour St</li>
+							<li>W Pender St at Richards St</li>
+							<li>W Pender St at Hamilton St</li>
+							<li>Cambie St at W Georgia St</li>
+							<li>Cambie St at Robson St</li>
+							<li>Nelson St at Cambie St</li>
+							<li>Cambie St at W 7 Ave</li>*@
+						<li class="">...</li>
+						<li>W Broadway at Ash St</li>
+						<li class="current-bus-stop"><i class="fa fa-arrow-circle-right"></i> W Broadway at Ash St</li>
+						<li>W Broadway at Heather St</li>
+						<li class="">...</li>
+						@*<li>W Broadway at Willow St</li>
+							<li>Oak St at W Broadway</li>
+							<li>Oak St at W 10 Ave</li>
+							<li>Oak St at W 12 Ave</li>
+							<li>Oak St at W 14 Ave</li>
+							<li>Oak St at W 16 Ave</li>
+							<li>Oak St at Douglas Cres</li>
+							<li>Oak St at Balfour Ave</li>
+							<li>Oak St at W King Edward Ave</li>
+							<li>Oak St at Nanton Ave</li>
+							<li>Oak St at Devonshire Cres</li>
+							<li>Oak St at W 33 Ave</li>
+							<li>Oak St at W 37 Ave</li>
+							<li>Oak St at 5600 Block</li>
+							<li>Oak St at W 41 Ave</li>
+							<li>Oak St at W 43 Ave</li>
+							<li>Oak St at W 46 Ave</li>
+							<li>Oak St at W 49 Ave</li>
+							<li>Oak St at W 52 Ave</li>
+							<li>Oak St at W 54 Ave</li>
+							<li>Oak St at W 57 Ave</li>
+							<li>Oak St at W 59 Ave</li>
+							<li>Oak St at Park Dr </li>
+							<li>Oak St at W 64 Ave</li>
+							<li>Oak St at W 67 Ave</li>
+							<li>Oak St at W 70 Ave</li>
+							<li>Oak St at W 72 Ave</li>
+							<li>Sw Marine Dr at Laurel St</li>
+							<li>Sw Marine Dr at Heather St</li>
+							<li>Sw Marine Dr at W 70 Ave</li>*@
+						<li>Sw Marine Dr at Ash St</li>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
