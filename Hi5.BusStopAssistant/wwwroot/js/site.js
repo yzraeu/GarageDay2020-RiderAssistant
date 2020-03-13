@@ -28,4 +28,8 @@ $(function () {
         }
         playingAudio = !playingAudio;
     });
+
+    $(".dropdown-item").on('change', function (e) {
+        console.log(e);
+    });
 });

@@ -1,10 +1,14 @@
-﻿@{
+﻿@using Microsoft.AspNetCore.Mvc.Localization
+
+@inject IViewLocalizer Localizer
+
+@{
 	ViewData["Title"] = "Bus Stop #58269";
 }
 
 <div class="row assistant-header">
 	<div class="header-logo"></div>
-	<div class="col header-text">Rider Assistant</div>
+	<div class="col header-text">@Localizer["AppTitle"]</div>
 </div>
 <div class="row assistant-options">
 	<div class="col-4 speak-col">
@@ -12,13 +16,13 @@
 	</div>
 	<div class="col-4 language-col">
 		<div class="dropdown">
-			<button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+			<button class="btn btn-secondary dropdown-toggle" type="button" id="language-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 				<i class="fa fa-language fa-lg"></i>
 			</button>
 			<div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-				<a class="dropdown-item" href="#">🇨🇦 English</a>
-				<a class="dropdown-item" href="#">🇧🇷 Portugues</a>
-				<a class="dropdown-item" href="#">🇸🇻 Español</a>
+				<a class="dropdown-item" href="#en-CA">🇨🇦 English</a>
+				<a class="dropdown-item" href="#pt-BR">🇧🇷 Português</a>
+				<a class="dropdown-item" href="#es-ES">🇸🇻 Español</a>
 			</div>
 		</div>
 	</div>
@@ -27,7 +31,7 @@
 	</div>
 </div>
 <div class="row assistant-body">
-	<h2>Bus Stop #58269 - W Broadway at Ash St</h2>
+	<h2>@Localizer["BusStop"] #58269 - W Broadway at Ash St</h2>
 	<div class="accordion" id="accordionExample">
 		<div class="card">
 			<div class="card-header" id="headingOne" data-toggle="collapse" data-target="#collapseOne">
@@ -126,7 +130,7 @@
 				</div>
 			</div>
 			<div class="card-alert">
-				<span class="badge badge-warning">Cancellation</span> Bus number 9 will be canceled after 8PM.
+				<span class="badge badge-warning">@Localizer["Cancellation"]</span> @Localizer["CancellationMessage"]
 			</div>
 			<div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionExample">
 				<div class="card-body">
