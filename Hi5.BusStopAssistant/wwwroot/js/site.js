@@ -3,20 +3,26 @@
 $(function () {
     let playingAudio = false;
 
-    let sound = new Howl({
-        src: [`/audios/Audio_${language}.mp3`, `/audios/Alert_${language}.mp3`]
+    let infoAudio = new Howl({
+        src: [`/audios/Audio_${language}.mp3`]
     });
 
-    var audioId = sound.play();
-    var alertId = sound.play();
+    let alertAudio = new Howl({
+        src: [`/audios/Alert_${language}.mp3`]
+    });
 
+    infoAudio.on('end', function () {
+        alertAudio.play();
+    });
+    
     $("#mute-button").on('click', function (e) {
         let button = $(this);
         if (playingAudio) {
-            sound.stop(alertId);
+            infoAudio.stop();
+            alertAudio.stop();
             button.removeClass("fa-volume-up").addClass("fa-volume-mute");
         } else {
-            sound.play(alertId);
+            infoAudio.play();
             button.addClass("fa-volume-up").removeClass("fa-volume-mute");
 
         }
