@@ -7,22 +7,16 @@ $(function () {
         src: [`/audios/Audio_${language}.mp3`, `/audios/Alert_${language}.mp3`]
     });
 
-    sound.once('load', function () {
-        sound.play();
-    });
-
-    sound.on('end', function () {
-        console.log('Finished!');
-    });
-
+    var audioId = sound.play();
+    var alertId = sound.play();
 
     $("#mute-button").on('click', function (e) {
         let button = $(this);
         if (playingAudio) {
-            sound.stop();
+            sound.stop(alertId);
             button.removeClass("fa-volume-up").addClass("fa-volume-mute");
         } else {
-            sound.play();
+            sound.play(alertId);
             button.addClass("fa-volume-up").removeClass("fa-volume-mute");
 
         }
