@@ -19,8 +19,6 @@ namespace Hi5.BusStopAssistant.Controllers
 
         public IActionResult Index()
         {
-            var a = _localizer["AppTitle"];
-
             return View();
         }
 

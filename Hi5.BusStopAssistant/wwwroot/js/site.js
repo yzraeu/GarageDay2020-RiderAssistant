@@ -3,6 +3,10 @@
 $(function () {
     let playingAudio = false;
 
+    let culture = getParameterByName("culture");
+
+    if (culture) language = culture; // Override the browser setting for audios
+
     let infoAudio = new Howl({
         src: [`/audios/Audio_${language}.mp3`]
     });
@@ -33,3 +37,13 @@ $(function () {
         console.log(e);
     });
 });
+
+function getParameterByName(name, url) {
+    if (!url) url = window.location.href;
+    name = name.replace(/[\[\]]/g, '\\$&');
+    var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url);
+    if (!results) return null;
+    if (!results[2]) return '';
+    return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
