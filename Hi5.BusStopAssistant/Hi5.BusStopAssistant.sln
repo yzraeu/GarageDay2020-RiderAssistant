@@ -7,8 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Hi5.BusStopAssistant", "Hi5
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "deploy", "deploy", "{DFCABCB9-3535-46EC-B400-9F9D1F9BCBE2}"
 	ProjectSection(SolutionItems) = preProject
-		..\.github\workflows\dev_riderassistant.yml = ..\.github\workflows\dev_riderassistant.yml
-		..\.github\workflows\dotnetcore.yml = ..\.github\workflows\dotnetcore.yml
+		..\.github\workflows\master_riderassistant.yml = ..\.github\workflows\master_riderassistant.yml
 	EndProjectSection
 EndProject
 Global
