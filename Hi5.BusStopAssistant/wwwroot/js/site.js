@@ -8,11 +8,11 @@ $(function () {
     if (culture) language = culture; // Override the browser setting for audios
 
     let infoAudio = new Howl({
-        src: [`/audios/Audio_${language}.mp3`]
+        src: [`/audios/Audio_${language}.webm`, `/audios/Audio_${language}.mp3`]
     });
 
     let alertAudio = new Howl({
-        src: [`/audios/Alert_${language}.mp3`]
+        src: [`/audios/Alert_${language}.webm`, `/audios/Alert_${language}.mp3`]
     });
 
     infoAudio.on('end', function () {
