@@ -7,28 +7,48 @@ $(function () {
 
     if (culture) language = culture; // Override the browser setting for audios
 
-    let infoAudio = new Howl({
-        src: [`/audios/Audio_${language}.webm`, `/audios/Audio_${language}.mp3`],
+    let infoAudio1 = new Howl({
+        src: [`/audios/audio1_${language}.webm`, `/audios/audio1_${language}.mp3`],
+        html5: true
+    });
+
+    let infoAudio2 = new Howl({
+        src: [`/audios/audio2_${language}.webm`, `/audios/audio2_${language}.mp3`],
         html5: true
     });
 
     let alertAudio = new Howl({
-        src: [`/audios/Alert_${language}.webm`, `/audios/Alert_${language}.mp3`],
+        src: [`/audios/alert_${language}.webm`, `/audios/alert_${language}.mp3`],
         html5: true
     });
 
-    infoAudio.on('end', function () {
+    let cancellationAudio = new Howl({
+        src: [`/audios/cancel_${language}.webm`, `/audios/cancel_${language}.mp3`],
+        html5: true
+    });
+
+    infoAudio1.on('end', function () {
+        infoAudio2.play();
+    });
+
+    infoAudio2.on('end', function () {
         alertAudio.play();
+    });
+
+    alertAudio.on('end', function () {
+        cancellationAudio.play();
     });
     
     $("#mute-button").on('click', function (e) {
         let button = $(this);
         if (playingAudio) {
-            infoAudio.stop();
+            infoAudio1.stop();
+            infoAudio2.stop();
             alertAudio.stop();
+            cancellationAudio.stop();
             button.removeClass("fa-volume-up").addClass("fa-volume-mute");
         } else {
-            infoAudio.play();
+            infoAudio1.play();
             button.addClass("fa-volume-up").removeClass("fa-volume-mute");
 
         }
